@@ -1,0 +1,36 @@
+﻿added everything
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   ece369/ece369.cache/wt/gui_resources.wdf
+#	new file:   ece369/ece369.cache/wt/java_command_handlers.wdf
+#	new file:   ece369/ece369.cache/wt/project.wpc
+#	new file:   ece369/ece369.cache/wt/webtalk_pa.xml
+#	new file:   ece369/ece369.hw/ece369.lpr
+#	new file:   ece369/ece369.srcs/sources_1/new/TopModule.v
+#	new file:   ece369/ece369.xpr
+#	new file:   ece369/vivado.jou
+#	new file:   ece369/vivado.log
+#	new file:   mips/vbsme.s
+#	new file:   verilog/ALU32Bit.v
+#	new file:   verilog/DataMemory.v
+#	new file:   verilog/DataMemory_tb.v
+#	new file:   verilog/InstructionFetchUnit.v
+#	new file:   verilog/InstructionFetchUnit_tb.v
+#	new file:   verilog/InstructionMemory.v
+#	new file:   verilog/InstructionMemory_tb.v
+#	new file:   verilog/Mux32Bit2To1.v
+#	new file:   verilog/PCAdder.v
+#	new file:   verilog/PCAdder_tb.v
+#	new file:   verilog/ProgramCounter.v
+#	new file:   verilog/ProgramCounter_tb.v
+#	new file:   verilog/RegisterFile.v
+#	new file:   verilog/SignExtension.v
+#	new file:   verilog/Two4DigitDisplay/SevenSegment.v
+#	new file:   verilog/Two4DigitDisplay/Two4DigitDisplay.v
+#	new file:   verilog/Two4DigitDisplay/Two4DigitDisplay.xdc
+#
+
