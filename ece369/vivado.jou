@@ -2,13 +2,62 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Oct 13 09:09:56 2017
-# Process ID: 9332
-# Current directory: C:/Users/matthew/Desktop/369/ece369
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9444 C:\Users\matthew\Desktop\369\ece369\ece369.xpr
-# Log file: C:/Users/matthew/Desktop/369/ece369/vivado.log
-# Journal file: C:/Users/matthew/Desktop/369/ece369\vivado.jou
+# Start of session at: Tue Oct 17 22:09:39 2017
+# Process ID: 9604
+# Current directory: C:/Users/matthew/Documents/GitHub/ECE369/ece369
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6452 C:\Users\matthew\Documents\GitHub\ECE369\ece369\ece369.xpr
+# Log file: C:/Users/matthew/Documents/GitHub/ECE369/ece369/vivado.log
+# Journal file: C:/Users/matthew/Documents/GitHub/ECE369/ece369\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/matthew/Desktop/369/ece369/ece369.xpr
+open_project C:/Users/matthew/Documents/GitHub/ECE369/ece369/ece369.xpr
 update_compile_order -fileset sources_1
+close [ open C:/Users/matthew/Documents/GitHub/ECE369/verilog/adder.v w ]
+add_files C:/Users/matthew/Documents/GitHub/ECE369/verilog/adder.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open C:/Users/matthew/Documents/GitHub/ECE369/verilog/Mux5bit2to1.v w ]
+add_files C:/Users/matthew/Documents/GitHub/ECE369/verilog/Mux5bit2to1.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+close_design
+open_run synth_1 -name synth_1
+close_design
+close [ open C:/Users/matthew/Documents/GitHub/ECE369/verilog/and.v w ]
+add_files C:/Users/matthew/Documents/GitHub/ECE369/verilog/and.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open C:/Users/matthew/Documents/GitHub/ECE369/verilog/HiLowReg.v w ]
+add_files C:/Users/matthew/Documents/GitHub/ECE369/verilog/HiLowReg.v
+update_compile_order -fileset sources_1
+remove_files  C:/Users/matthew/Documents/GitHub/ECE369/verilog/HiLowReg.v
+update_compile_order -fileset sources_1
+close [ open C:/Users/matthew/Documents/GitHub/ECE369/verilog/addSub.v w ]
+add_files C:/Users/matthew/Documents/GitHub/ECE369/verilog/addSub.v
+update_compile_order -fileset sources_1
+remove_files  C:/Users/matthew/Documents/GitHub/ECE369/verilog/addSub.v

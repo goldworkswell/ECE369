@@ -2,21 +2,95 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Fri Oct 13 09:09:56 2017
-# Process ID: 9332
-# Current directory: C:/Users/matthew/Desktop/369/ece369
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9444 C:\Users\matthew\Desktop\369\ece369\ece369.xpr
-# Log file: C:/Users/matthew/Desktop/369/ece369/vivado.log
-# Journal file: C:/Users/matthew/Desktop/369/ece369\vivado.jou
+# Start of session at: Tue Oct 17 22:09:39 2017
+# Process ID: 9604
+# Current directory: C:/Users/matthew/Documents/GitHub/ECE369/ece369
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6452 C:\Users\matthew\Documents\GitHub\ECE369\ece369\ece369.xpr
+# Log file: C:/Users/matthew/Documents/GitHub/ECE369/ece369/vivado.log
+# Journal file: C:/Users/matthew/Documents/GitHub/ECE369/ece369\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/matthew/Desktop/369/ece369/ece369.xpr
+open_project C:/Users/matthew/Documents/GitHub/ECE369/ece369/ece369.xpr
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
-open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 675.715 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 704.051 ; gain = 23.363
 update_compile_order -fileset sources_1
-exit
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 13 09:42:22 2017...
+close [ open C:/Users/matthew/Documents/GitHub/ECE369/verilog/adder.v w ]
+add_files C:/Users/matthew/Documents/GitHub/ECE369/verilog/adder.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open C:/Users/matthew/Documents/GitHub/ECE369/verilog/Mux5bit2to1.v w ]
+add_files C:/Users/matthew/Documents/GitHub/ECE369/verilog/Mux5bit2to1.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 2
+[Wed Oct 18 00:04:44 2017] Launched synth_1...
+Run output will be captured here: C:/Users/matthew/Documents/GitHub/ECE369/ece369/ece369.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Oct 18 00:07:03 2017] Launched synth_1...
+Run output will be captured here: C:/Users/matthew/Documents/GitHub/ECE369/ece369/ece369.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Oct 18 00:08:04 2017] Launched synth_1...
+Run output will be captured here: C:/Users/matthew/Documents/GitHub/ECE369/ece369/ece369.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Oct 18 00:08:55 2017] Launched synth_1...
+Run output will be captured here: C:/Users/matthew/Documents/GitHub/ECE369/ece369/ece369.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Oct 18 00:09:25 2017] Launched synth_1...
+Run output will be captured here: C:/Users/matthew/Documents/GitHub/ECE369/ece369/ece369.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Oct 18 00:12:24 2017] Launched synth_1...
+Run output will be captured here: C:/Users/matthew/Documents/GitHub/ECE369/ece369/ece369.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Oct 18 00:21:55 2017] Launched synth_1...
+Run output will be captured here: C:/Users/matthew/Documents/GitHub/ECE369/ece369/ece369.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Wed Oct 18 00:29:09 2017] Launched synth_1...
+Run output will be captured here: C:/Users/matthew/Documents/GitHub/ECE369/ece369/ece369.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:23 ; elapsed = 00:00:15 . Memory (MB): peak = 1101.047 ; gain = 314.160
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:05 . Memory (MB): peak = 1557.762 ; gain = 0.000
+close_design
+close [ open C:/Users/matthew/Documents/GitHub/ECE369/verilog/and.v w ]
+add_files C:/Users/matthew/Documents/GitHub/ECE369/verilog/and.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open C:/Users/matthew/Documents/GitHub/ECE369/verilog/HiLowReg.v w ]
+add_files C:/Users/matthew/Documents/GitHub/ECE369/verilog/HiLowReg.v
+update_compile_order -fileset sources_1
+remove_files  C:/Users/matthew/Documents/GitHub/ECE369/verilog/HiLowReg.v
+update_compile_order -fileset sources_1
+close [ open C:/Users/matthew/Documents/GitHub/ECE369/verilog/addSub.v w ]
+add_files C:/Users/matthew/Documents/GitHub/ECE369/verilog/addSub.v
+update_compile_order -fileset sources_1
+remove_files  C:/Users/matthew/Documents/GitHub/ECE369/verilog/addSub.v
