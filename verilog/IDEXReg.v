@@ -58,7 +58,7 @@ always@(negedge Clk) begin
     Register1_ReadOut <= Register1_Read;
     Register2_ReadOut <= Register2_Read;
     SignExtendOut <= SignExtend;
-    Instruction16_20Out <= Instruction16_20;
-    Instruction5_11Out <= Instruction5_11;
+    Instruction16_20Out <= instruction16_20;
+    Instruction5_11Out <= instruction5_11;
 end
 endmodule

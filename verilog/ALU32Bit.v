@@ -107,7 +107,11 @@ module ALU32Bit(ALUControl, A, B, ALUResultLow, ALUResultHigh, Zero);
 		end
 
    endcase
-   assign Zero = (ALUResultLow == 0);
+   //assign Zero = (ALUResultLow == 0);
+   if(ALUResultLow==0)
+		Zero<=1;
+	else 
+		Zero<=0;
    end
 
 endmodule

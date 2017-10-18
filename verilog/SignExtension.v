@@ -11,10 +11,10 @@ module SignExtension(in, out);
     input [15:0] in;
     
     /* A 32-Bit output word */
-    output [31:0] out;
+    output reg [31:0] out;
     
     /* Fill in the implementation here ... */
-always @(posedge Clk)begin
-	out[31:0]<={{16{in[15]}},in};//not sure if this is correct
+always @(*)begin
+	out[31:0]<={{16{in[15]}},in};
 end
 endmodule

@@ -41,16 +41,16 @@ module InstructionMemory(Address, Instruction);
     input [31:0] Address;        // Input Address 
 	
     output reg [31:0] Instruction;    // Instruction at memory location Address
-    reg [31:0] storage [127:0];
-    
+    reg [31:0] storage [511:0];
+    integer i;
     initial begin
-        for(integer i=0; i<=127;i=i+1) begin
+        for( i=0; i<=127;i=i+1) begin
     	   storage[i]=4*i;
         end
        end
     
     always @(Address) begin
-    	Instruction <= storage[Address[8:2]];
+    	Instruction <= storage[Address[31:2]];
     
     end
     /* Please fill in the implementation here */
