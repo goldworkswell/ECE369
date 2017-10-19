@@ -21,23 +21,23 @@
 
 
 module IDEXReg(Clk,Ctrl_WBIn, Ctrl_MemIn, Ctrl_ExIn, PCAdderIn, Register1_ReadIn, Register2_ReadIn, SignExtendIn, Instruction16_20In, Instruction5_11In, 
-    Ctrl_WBOut, Ctrl_MemOut, Ctrl_ExOut, PCAdderOut, Register1_ReadOut, Register2_ReadOut, SignExtendOut, Instruction16_20Out, Instruction5_11Out);
+    Ctrl_WBOut, Ctrl_MemOut, Ctrl_ExOut, PCAdderOut, Register1_ReadOut, Register2_ReadOut, SignExtendOut, Instruction16_20Out, Instruction5_11Out,signExtended2,signExtended2_1);
     input Clk;
     input [1:0] Ctrl_WBIn;  //MemtoReg and RegWrite Control Signals
     input [2:0] Ctrl_MemIn; //Branch, MemWrite, and MemRead Control Signals
     input [3:0] Ctrl_ExIn;        //RegDst, ALUSrc, and ALUOp Control Signals
-    input [31:0] PCAdderIn, Register1_ReadIn, Register2_ReadIn, SignExtendIn;
+    input [31:0] PCAdderIn, Register1_ReadIn, Register2_ReadIn, SignExtendIn,signExtended2;
     input [4:0]  Instruction16_20In, Instruction5_11In;
     output reg [1:0] Ctrl_WBOut;
     output reg [2:0] Ctrl_MemOut;
     output reg [3:0] Ctrl_ExOut;
-    output reg [31:0] PCAdderOut, Register1_ReadOut, Register2_ReadOut, SignExtendOut;
+    output reg [31:0] PCAdderOut, Register1_ReadOut, Register2_ReadOut, SignExtendOut,signExtended2_1;
     output reg [4:0] Instruction16_20Out, Instruction5_11Out;
 	
 	reg [1:0] Ctrl_WB;
 	reg [2:0] Ctrl_Mem;
 	reg [3:0] Ctrl_Ex;
-	reg [31:0] PCAdder,Register1_Read,Register2_Read,SignExtend;
+	reg [31:0] PCAdder,Register1_Read,Register2_Read,SignExtend,signExtended2reg;
 	reg [4:0] instruction16_20,instruction5_11;
 always @(posedge Clk) begin
 	Ctrl_WB<=Ctrl_WBIn;
@@ -49,6 +49,7 @@ always @(posedge Clk) begin
 	SignExtend<=SignExtendIn;
 	instruction16_20<=Instruction16_20In;
 	instruction5_11<=Instruction5_11In;	
+	signExtended2reg<=signExtended2;
 end
 always@(negedge Clk) begin
     Ctrl_WBOut <= Ctrl_WB;
@@ -60,5 +61,6 @@ always@(negedge Clk) begin
     SignExtendOut <= SignExtend;
     Instruction16_20Out <= instruction16_20;
     Instruction5_11Out <= instruction5_11;
+    signExtended2_1<=signExtended2reg;
 end
 endmodule

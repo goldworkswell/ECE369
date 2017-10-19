@@ -20,9 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module control(Opcode, RegDst, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch, ALUOp);
+module control(Opcode, RegDst, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch, ALUOp,ALUSrc2);
     input [31:0] Opcode;
-    output reg RegDst, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch;
+    output reg RegDst, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch,ALUSrc2;
     output reg [1:0] ALUOp;
     
     always @(Opcode) begin

@@ -29,11 +29,11 @@ wire [4:0] writeLoc,writeLoc_1,writeLoc_2;
 wire [31:0] writeData, readData1,readData2,signExtended,ALUInput, ALUResultLow,ALUResultHigh,readData,instruc,addOut,addOut_1;
 wire [31:0] shiftedBy2,PCResult,PCAddResult,PCAddResult_1,readData1_1,readData2_1,instruc20_16,instruc11_5,PCAddResult_2,ALUResult,ALUResult_1;
 //pcresult is ouput from mux into pc unit
-wire [31:0] readData2_2,signExtended_1,readData_1,ALUResult_2;
+wire [31:0] readData2_2,signExtended_1,readData_1,ALUResult_2,signExtended2,signExtended2_1,ALUInput2;
 
 wire RegDst;
 wire RegWrite;
-wire ALUSrc;
+wire ALUSrc,ALUSrc2;
 wire ALUOpCode;
 wire MemWrite;
 wire MemRead;
@@ -50,16 +50,18 @@ IFIDReg FtoDReg(Clk,PCAddResult,instruc,PCAddResult_1,instruction);
 
 RegisterFile Registers(instruction[25:21],instruction[20:16],writeAddress,writeData,WB_2[1],Clk,readData1,readData2);
 //change stuff with sending intruction
-control Controler(instruction, RegDst,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,ALUOp);
+control Controler(instruction, RegDst,ALUSrc,MemtoReg,RegWrite,MemRead,MemWrite,Branch,ALUOp,ALUSrc2);
 SignExtension SignExtend(instruction[15:0],signExtended);
+signExtendfrom5bit SignExtend2(instruction[10:6],signExtended2);
 
-IDEXReg DtoEReg(Clk,{RegWrite,MemtoReg},{Branch,MemRead,MemWrite},{RegDst,ALUOp,ALUSrc},PCAddResult_1,readData1,readData2,signExtended,instruction[20:16],instruction[11:5],WB,MEM,EX,PCAddResult_2,readData1_1,readData2_1,
-signExtended_1,instruc20_16,instruc11_5);
+IDEXReg DtoEReg(Clk,{RegWrite,MemtoReg},{Branch,MemRead,MemWrite},{RegDst,ALUOp,ALUSrc,ALUSrc},PCAddResult_1,readData1,readData2,signExtended,instruction[20:16],instruction[11:5],WB,MEM,EX,PCAddResult_2,readData1_1,readData2_1,
+signExtended_1,instruc20_16,instruc11_5,signExtended2,signExtended2_1);
 
 sll2bits ShiftLeft(signExtended,shiftedBy2);
-Mux32Bit2To1 MuxtoALU(ALUInput,readData2_1,signExtended_1,EX[0]);
+Mux32Bit2To1 MuxtoALU(ALUInput,readData2_1,signExtended_1,EX[1]);
 adder add(shiftedBy2,PCAddResult_2,addOut);
-ALU32Bit ALU(ALUOpCode,readData1_1,ALUInput,ALUResultLow,ALUResultHigh,Zero);
+Mux32Bit2To1 MuxtoALUTop(ALUInput2,readData1_1,signExtended2_1,EX[0]);
+ALU32Bit ALU(ALUOpCode,ALUInput2,ALUInput,ALUResultLow,ALUResultHigh,Zero);
 
 //when change size of EX this index needs to change
 Mux5bit2to1 MuxLoc(instruc20_16,instruc11_5,EX[3],writeLoc);
